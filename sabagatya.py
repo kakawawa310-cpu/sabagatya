@@ -72,7 +72,7 @@ async def gacha(interaction: discord.Interaction):
     if target_guild:
         try:
             # 招待リンクを作成（有効期限5分、1回使い切り）
-            invite = await target_guild.text_channels[0].create_invite(max_age=300, max_uses=1)].create_invite(max_age=300, max_uses=1)
+            invite = await target_guild.text_channels[0].create_invite(max_age=300, max_uses=1)
             await interaction.response.send_message(f"✨ **当たりのサーバー：{target_guild.name}**\n{invite}")
         except Exception:
             await interaction.response.send_message("招待リンクの作成に失敗しました。ボットに「招待を作成」権限があるか確認してください。", ephemeral=True)
